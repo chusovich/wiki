@@ -1,0 +1,4 @@
+site_name: Personal Wiki
+site_url: https://chusovich.github.io.wiki
+theme:
+  name: material
