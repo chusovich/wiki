@@ -2,6 +2,8 @@ site_name: Personal Wiki
 site_url: https://chusovich.github.io/wiki
 
 theme:
+  icon:
+    logo: material/library
   name: material
   palette: 
     # Set the primary color
@@ -11,6 +13,8 @@ theme:
     features:
     - search.highlight
     - search.suggest
+    - navigation.instant
+    - navigation.tabs
 
     # Palette toggle for light mode
     - scheme: default
@@ -23,3 +27,21 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+
+markdown_extensions:
+  # Extensions for annotations
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  
+  # Extensions for code syntax highlighting
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  
+  # Extension for tables
+  - tables
