@@ -1,4 +1,25 @@
 site_name: Personal Wiki
-site_url: https://chusovich.github.io.wiki
+site_url: https://chusovich.github.io/wiki
+
 theme:
   name: material
+  palette: 
+    # Set the primary color
+    primary: blue
+
+    # Add additional search features
+    features:
+    - search.highlight
+    - search.suggest
+
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
