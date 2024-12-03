@@ -1,5 +1,5 @@
 # ZFS Commands
-
+See [Oracle's Documentation Guide](https://docs.oracle.com/cd/E23823_01/html/819-5461/toc.html) for more detailed information and examples.
 ## Pools and vDevs
 
 #### Create a mirror pool
@@ -47,3 +47,5 @@ sudo zfs get quota /mypool/mydataset # view the quota of the dataset
 ```terminal
 zfs allow
 ```
+
+## Snapshots
