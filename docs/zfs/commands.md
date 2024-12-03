@@ -2,34 +2,42 @@
 
 ## Pools and vDevs
 
-``` title="Create a mirrored pool"
-# create a new pool called new-pool using the devices /dev/sdb and /dev/sdc in a mirror
+### Create a mirror pool
+create a new pool called new-pool using the devices /dev/sdb and /dev/sdc in a mirror
+```terminal
 sudo zpool create new-pool mirror /dev/sdb /dev/sdc
-# you can also use the -m option to specify the mount point
-# the default mount point is /poolname
+```
+You can also use the ```-m``` option to specify the mount point. The default mount point is ```/poolname```
+```console
 sudo zpool create -m /usr/sharepool new-pool mirror /dev/sdb /dev/sdc
 ```
 
 ### Checking the status of all zfs pools
-```
+```bash
 sudo zpool status
 ```
 
-``` title="Adding devices to an existing ZFS pool"
-# add the devices /dev/sdb and /dev/sdc to the pool called existing-pool 
+### Add devices to an existing ZFS pool
+add the devices /dev/sdb and /dev/sdc to the pool called existing-pool 
+```yaml
 zpool add existing-pool mirror /dev/sdb /dev/sdc
 ```
 
 ## Datasets
-``` title="Create a dataset named 'mydataset' on the pool 'mypool'"
+
+#### Create a new dataset
+Create a dataset named 'mydataset' on the pool 'mypool'
+```rust
 sudo zfs create mypool/mydataset
 ``` 
 
-```title="Check the dataset size"
+#### Check the dataset seize
+```go
 sudo zfs list mypool/dataset
 ```
 
-``` title="Set additional properties"
+#### Set additional properties
+```cpp
 sudo zfs set compression=on mypool/mydataset # turns on compression
 sudo zfs set quota=10G mypool/mydataset # set the sixe quota to 10GB
 sudo zfs get quota /mypool/mydataset # view the quota of the dataset
