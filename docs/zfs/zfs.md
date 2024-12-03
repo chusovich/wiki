@@ -1,2 +1,0 @@
-# ZFS
-zfs is complicated
