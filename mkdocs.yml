@@ -16,6 +16,7 @@ theme:
     - search.suggest
     - navigation.instant
     - navigation.tabs
+    - content.code.copy
 
     # Palette toggle for light mode
     - scheme: default
