@@ -1,4 +1,5 @@
 # ZFS on NixOS
+see the [NixOS Wiki](https://nixos.wiki/wiki/ZFS#Declarative_mounting_of_ZFS_datasets) on ZFS, or look up specific options using the [NixOS options search](https://search.nixos.org/options?)
 
 ## Example Configuration Settings
 ```nix
