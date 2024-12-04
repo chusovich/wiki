@@ -41,6 +41,7 @@ sudo zfs list mypool/dataset
 sudo zfs set compression=on mypool/mydataset # turns on compression
 sudo zfs set quota=10G mypool/mydataset # set the sixe quota to 10GB
 sudo zfs get quota /mypool/mydataset # view the quota of the dataset
+sudo zfs set canmount=on and mountpoint=/mount/point mypool/mydataset # these two options mount the dataset at boot
 ```
 
 ## Permissions
