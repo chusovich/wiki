@@ -4,11 +4,11 @@ see the [NixOS Wiki](https://nixos.wiki/wiki/ZFS#Declarative_mounting_of_ZFS_dat
 ## Example Configuration Settings
 ```nix
 # Networking
-networking.hostId = "4f98920a"; # this is used to make sure the pool is imported on the correct machine
+networking.hostId = "4f98920a"; # used to make sure the pool is imported correctly
 
 # Basic ZFS Settings
 boot.supportedFilesystems = [ "zfs" ]; # enable zfs
-boot.zfs.forceImportRoot = false; # this option forces the import of zfs root pools, which we don't care about or wnat
+boot.zfs.forceImportRoot = false; # force the import of zfs root pools
 boot.zfs.extraPools = [ "my-pool" "my-other-pool" ]; # mount the pools listed on boot
 
 # Autoscrubbing settings
