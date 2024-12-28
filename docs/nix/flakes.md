@@ -1,5 +1,5 @@
 # Example Flake
-see the [NixOS Wiki](https://nixos.wiki/wiki/Flakes#Using_nix_flakes_with_NixOS) for helpful notes.
+see the [NixOS Wiki](https://nixos.wiki/wiki/Flakes) for helpful notes.
 
 ## Building a configuration.nix the nixos-unstable channel
 ```
