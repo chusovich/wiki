@@ -12,7 +12,7 @@ see [this OpenWRT wiki page](https://openwrt.org/toh/raspberry_pi_foundation/ras
 opkg update
 opkg install tailscale
 opkg install iptables-nft kmod-ipt-conntrack kmod-ipt-conntrack-extra kmod-ipt-conntrack-label kmod-nft-nat 
-opkg kmod-ipt-nat
+opkg install kmod-ipt-nat
 ```
 
 ```
