@@ -1,8 +1,14 @@
-# OpenWRT/Tailscale on Raspberry Pi 4
-OpenWRT version 23.05
+# Raspberry Pi 4
+OpenWRT version 24.10
 Raspberry Pi 4
 
+## Downloading the Firmware
+use the [OpenWRT Firmware Selector](https://firmware-selector.openwrt.org/) to download the appropriate image. I opted for the ext4 version, rather than the squashfs version. You can also add custom packages to the firmware (e.g. I installed all the ones below, including Tailscale).
+
+## Tailscale
+
 see [this OpenWRT wiki page](https://openwrt.org/docs/guide-user/services/vpn/tailscale/start) for the basic setup guide
+
 see [this OpenWRT wiki page](https://openwrt.org/toh/raspberry_pi_foundation/raspberry_pi) for all things Raspberry Pi
  
 ## Install Packages
