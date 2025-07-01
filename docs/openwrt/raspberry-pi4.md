@@ -3,7 +3,7 @@ OpenWRT version 24.10
 Raspberry Pi 4
 
 ## Downloading the Firmware
-use the [OpenWRT Firmware Selector](https://firmware-selector.openwrt.org/) to download the appropriate image. I opted for the ext4 version, rather than the squashfs version. You can also add custom packages to the firmware (e.g. I installed all the ones below, including Tailscale).
+use the [OpenWRT Firmware Selector](https://firmware-selector.openwrt.org/) to download the appropriate image. I end up using the squashfs version. You can also add custom packages to the firmware (e.g. I installed all the ones below, including Tailscale). I also believe I had to connect teh hdmi cable before it booted to get the terminal to appear.
 
 ## Tailscale
 
