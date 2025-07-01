@@ -2,8 +2,22 @@
 OpenWRT version 24.10
 Raspberry Pi 4
 
+## Updates
+it is highly discouraged to update all packages use opkg update
+
+see [here](https://openwrt.org/meta/infobox/upgrade_packages_warning)
+```
+opkg update
+opkg upgrade <package>
+```
+## Hostname
+``` title="/etc/config/system"
+config system
+	option hostname '<your-hostname>'
+```
+
 ## Downloading the Firmware
-use the [OpenWRT Firmware Selector](https://firmware-selector.openwrt.org/) to download the appropriate image. I end up using the squashfs version. You can also add custom packages to the firmware (e.g. I installed all the ones below, including Tailscale). I also believe I had to connect teh hdmi cable before it booted to get the terminal to appear.
+use the [OpenWRT Firmware Selector](https://firmware-selector.openwrt.org/) to download the appropriate image. I ended up using the ext4 version. You can also add custom packages to the firmware (e.g. I installed nano and Tailscale). I also believe I had to connect teh hdmi cable before it booted to get the terminal to appear.
 
 ## Tailscale
 
@@ -23,7 +37,7 @@ opkg install kmod-ipt-nat
 
 ```
 service tailscale restart
-tailscale up --ssh --advertise-routes=192.168.10.0/25
+tailscale up --ssh --advertise-routes=192.168.10.0/24
 ```
 
 ## Enable Case Fan
