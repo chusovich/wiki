@@ -2,6 +2,11 @@
 OpenWRT version 24.10
 Raspberry Pi 4
 
+## USB Ethernet Adapters
+"for USB-to-Ethernet ASIX AX88179 based USB 3.0/2.0\\ to Gigabit Ethernet adapters" (see [here](https://openwrt.org/packages/pkgdata/kmod-usb-net-asix-ax88179))
+```
+opk install kmod-usb-net-asix-ax88179
+```
 ## Updates
 it is highly discouraged to update all packages use opkg update
 
