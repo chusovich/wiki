@@ -37,33 +37,21 @@ storage:
         inline: myhostname
 ```
 
-### Installing Docker CE on first boot
-```yaml
-variant: fcos
-version: 1.6.0
+### Enabling the Docker socket
+```
 systemd:
   units:
-    # Install Docker CE
-    - name: rpm-ostree-install-docker-ce.service
-      enabled: true
-      contents: |
-        [Unit]
-        Description=Install Docker CE
-        Wants=network-online.target
-        After=network-online.target
-        Before=zincati.service
-        ConditionPathExists=!/var/lib/%N.stamp
-
-        [Service]
-        Type=oneshot
-        RemainAfterExit=yes
-        ExecStart=/usr/bin/curl --output-dir "/etc/yum.repos.d" --remote-name https://download.docker.com/linux/fedora/docker-ce.repo
-        ExecStart=/usr/bin/rpm-ostree override remove moby-engine containerd runc docker-cli --install docker-ce
-        ExecStart=/usr/bin/touch /var/lib/%N.stamp
-        ExecStart=/usr/bin/systemctl --no-block reboot
-
-        [Install]
-        WantedBy=multi-user.target
+  - name: docker.socket
+    enabled: true
+     contents: |
+       [Unit]
+       Description=Docker Socket for the API
+       PartOf=docker.service
+        [Socket]
+       ListenStream=/var/run/docker.sock
+       SocketMode=0660
+       SocketUser=root
+       SocketGroup=docker
 ```
 
 ### Basic uCore Example 
@@ -116,6 +104,48 @@ systemd:
         ExecStart=/usr/bin/touch /etc/ucore-autorebase/signed
         ExecStart=/usr/bin/systemctl disable ucore-signed-autorebase.service
         ExecStart=/usr/bin/systemctl reboot
+        [Install]
+        WantedBy=multi-user.target
+```
+
+### Example User Config 
+```
+passwd:
+  users:
+    - name: core
+      ssh_authorized_keys:
+        - YOUR_SSH_PUB_KEY_HERE
+      groups:
+        - wheel
+        - sudo
+        - docker
+```
+
+### Installing Docker CE on first boot
+```yaml
+variant: fcos
+version: 1.6.0
+systemd:
+  units:
+    # Install Docker CE
+    - name: rpm-ostree-install-docker-ce.service
+      enabled: true
+      contents: |
+        [Unit]
+        Description=Install Docker CE
+        Wants=network-online.target
+        After=network-online.target
+        Before=zincati.service
+        ConditionPathExists=!/var/lib/%N.stamp
+
+        [Service]
+        Type=oneshot
+        RemainAfterExit=yes
+        ExecStart=/usr/bin/curl --output-dir "/etc/yum.repos.d" --remote-name https://download.docker.com/linux/fedora/docker-ce.repo
+        ExecStart=/usr/bin/rpm-ostree override remove moby-engine containerd runc docker-cli --install docker-ce
+        ExecStart=/usr/bin/touch /var/lib/%N.stamp
+        ExecStart=/usr/bin/systemctl --no-block reboot
+
         [Install]
         WantedBy=multi-user.target
 ```
