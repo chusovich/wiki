@@ -5,6 +5,7 @@
 [OPNsense® Download page](https://opnsense.org/download/)
 
 select architecture, image type (dvd is typical), and location (LeaseWeb East Coast)
+
 ### Proxmox Setup
 > [!note]
 > You don't need to configure any network settomgs yet. You can add software VLANs or PCI pass-through NICs in the later. By default, 
@@ -16,13 +17,16 @@ Import the .iso into Proxmox and and create a VM with the following settings:
 - 12 GB of disk space
 
 Everything else should be able to be kept at default.
+
 ### Create our LAN
 The network that proxmox is on will be the WAN from the perspective or OPNsense. We can't access OPNsense from it's WAN, so we need to add a machine to it's LAN so we can get to the web UI. First, we need to create the LAN.
+
 #### Creating a software VLAN
 In Proxmox, create a new interface and make it a VLAN
 Add this VLAN to the OPNsense VM
 Then add an Ubuntu Desktop VM and make it's network adapter the VLAN.
 You may want to add a PiHole VM to this VLAN to be the router. 
+
 #### Adding an addition network interface
 you can also give OPNsense access to a physical LAN with an additional NIC with PCIe passthrough
 
@@ -53,6 +57,7 @@ Start and enable the Tailscale daemon
 # service tailscaled start
 # tailscale version
 ```
+
 ### Connecting to Your Tailnet
 Add subnet routes and exit node status as necessary
 ```

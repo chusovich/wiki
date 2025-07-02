@@ -1,6 +1,5 @@
-## CoreOS
+# Fedora CoreOS
 
-## 
 - install coreOS
 - create ignition file
 

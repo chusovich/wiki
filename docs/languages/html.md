@@ -26,20 +26,24 @@ There are six levels of headings, h1 to h6
 ```html
 <h1>This is a heading</h1>
 ```
+
 ### Paragraphs
 ```html
 <p>this is a paragraph</p>
 <!-- paragraph tags also uniquely support the align attribute, value can be left, right, or center-->
 <p align=center>this is a centered paragraph</p>
 ```
+
 ### Line Break
 ```html
 <br> <!-- created a line break -->
 ```
+
 ### Horizontal Line
 ```html 
 <hr> <!-- inserts a horizontal line -->
 ```
+
 ### Pre Tag
 ```html 
 <pre>
@@ -49,6 +53,7 @@ as it is    unlike the paragraph
    tag.
 </pre>
 ```
+
 ### Hyperlinks
 The links destination is in the href attribute
 ```html
@@ -62,6 +67,7 @@ The links destination is in the href attribute
 | `_parent` | opens the url in the parent frame |
 | `_top` | opens the url in the full body of the window |
 | `framename` | open the url in the frame specified by the name attribute 
+
 ### Images
 attributes
 | Target | Description |
@@ -83,6 +89,7 @@ attributes
 	alt="GeeksforGeeks logo" />
 <a/>
 ```
+
 ### Favicons
 The following code can be used in the `<head>` section
 ```html
@@ -110,11 +117,13 @@ The following code can be used in the `<head>` section
 everything from the start tag to the end tag
 elements can be nested, i.e. element can contain other elements
 some elements are empty elements, meaning that they do not have closing tags
+
 ### Attributes
 - All HTML elements can have attributes
 - Attributes provide additional information about elements
 - Attributes are always specified in the start tag
 - Attributes usually come in name/value pairs like: name="value"
+
 #### Meta Attributes
 They provide basic page information in the head section of the html doc. 
 
@@ -143,6 +152,7 @@ They provide basic page information in the head section of the html doc.
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 ```
+
 #### Global Attributes
 All HTML element can have the following tags
 
@@ -174,6 +184,7 @@ examples:
 - background-color
 - color
 - font-family
+
 #### lang
 always inside the html tag
 ```html
@@ -184,6 +195,7 @@ always inside the html tag
 </body>  
 </html>
 ```
+
 #### title
 gives the element a tooltip
 ```html
@@ -201,6 +213,7 @@ gives the element a tooltip
 - `<ins>` - Inserted text
 - `<sub>` - Subscript text
 - `<sup>` - Superscript text
+
 ### Quotations
 - `<abbr>` - Defines an abbreviation or acronym
 - `<address>` - Defines contact information for the author/owner of a document
@@ -208,6 +221,7 @@ gives the element a tooltip
 - `<blockquote>` - Defines a section that is quoted from another source
 - `<cite>` - Defines the title of a work
 - `<q>` - Defines a short inline quotation
+
 ### Comments
 Single line comment:
 ```html

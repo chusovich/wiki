@@ -9,6 +9,7 @@ use the [OpenWRT Firmware Selector](https://firmware-selector.openwrt.org/) to d
 opkg update
 opkg install kmod-usb-net-asix-ax88179
 ```
+
 ## Updates
 it is highly discouraged to update all packages use opkg update
 
@@ -17,6 +18,7 @@ see [here](https://openwrt.org/meta/infobox/upgrade_packages_warning)
 opkg update
 opkg upgrade <package>
 ```
+
 ## Hostname
 ``` title="/etc/config/system"
 config system
@@ -74,8 +76,8 @@ config interface 'tailscale'
 ```
 
 
-## Raspberry Pi 4 Setup
-### Enable Case Fan
+## Raspberry Pi 4
+### Case Fan
 see [here](https://openwrt.org/toh/raspberry_pi_foundation/raspberry_pi#adding_a_case_fan)
 
 ```
@@ -88,9 +90,8 @@ opkg install kmod-hwmon-gpiofan
 dtoverlay=gpio-fan,gpiopin=14,temp=80000
 ```
 
-## Configure Wireless WAN (for Raspberry Pi 4
-
-### Configure wireless interface
+### Configure Wireless WAN
+#### Configure wireless interface
 ``` title="/etc/config/wireless"
 config wifi-device 'radio0'
     option type 'mac80211'
@@ -111,13 +112,13 @@ config wifi-iface 'wifinet1'
     option key 'EnChus81222'
 ```
 
-### Update the wifi settings on boot
+#### Update the wifi settings on boot
 ``` title="/etc/rc.local"
 uci commit wireless
 wifi
 ```
 
-## Configure DNS
+## DNS Configuration
 Add the last line for ip addresses
 ```
 config dnsmasq
