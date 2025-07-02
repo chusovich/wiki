@@ -53,7 +53,7 @@ Start and enable the Tailscale daemon
 # service tailscaled start
 # tailscale version
 ```
-## Connecting to Your Tailnet
+### Connecting to Your Tailnet
 Add subnet routes and exit node status as necessary
 ```
 # tailscale up sudo tailscale up /

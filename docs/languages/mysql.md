@@ -33,7 +33,7 @@ CREATE USER
 'user1'@'hostname' IDENTIFIED BY 'password',
 'user2'@'hostname' IDENTIFIED BY 'password';
 ```
-## Viewing User Permissions
+### Viewing User Permissions
 ```sql
 SHOW GRANTS FOR 'user'@'localhost';
 ```
@@ -48,7 +48,8 @@ https://docs.digitalocean.com/products/databases/mysql/how-to/modify-user-privil
 ### Other
 > [!note] 
 > The USER() command is used to return the current user account information
-# Databases
+
+## Databases
 Databases are created through the MySQL command line client.
 ```sql
 CREATE DATABASE IF NOT EXISTS myDatabase
