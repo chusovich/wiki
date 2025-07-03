@@ -9,8 +9,17 @@ Run:
 sudo coreos-installer install /dev/sda \
     --ignition-url https://example.com/example.ign
 ```
+Use the following flag if using http
+```
+--insecure-ignition
+```
 then reboot the system
 
+## Password hashing
+Using podman container
+```
+podman run -ti --rm quay.io/coreos/mkpasswd --method=yescrypt
+```
 
 ## Creating an Ignition File
 see the [Fedora CoreOS documentation](https://docs.fedoraproject.org/en-US/fedora-coreos/producing-ign/)
