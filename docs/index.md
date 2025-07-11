@@ -64,9 +64,6 @@ https://www.filestash.app
 #### Outline
 https://www.getoutline.com
 - knowledge base for teams and businesses
-#### Memos
-https://www.usememos.com
-- basic notes app (like Google Keep)
 ### Dashboards
 #### Homepage
 https://gethomepage.dev
