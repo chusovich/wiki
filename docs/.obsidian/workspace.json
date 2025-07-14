@@ -11,10 +11,14 @@
             "id": "e57a0b9e8da465f2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "nixos/common-config.md",
+                "mode": "preview",
+                "source": true
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "common-config"
             }
           }
         ]
@@ -159,7 +163,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -174,6 +179,11 @@
   },
   "active": "e57a0b9e8da465f2",
   "lastOpenFiles": [
+    "linux/iptables.md",
+    "languages/mysql.md",
+    "languages/html.md",
+    "languages/go.md",
+    "languages/ansible.md",
     "index.md",
     "nixos/common-config.md",
     "operating systems/nix.md"
