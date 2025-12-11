@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "nixos/common-config.md",
-                "mode": "preview",
+                "file": "languages/mysql.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "common-config"
+              "title": "mysql"
             }
           }
         ]
@@ -177,15 +177,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e57a0b9e8da465f2",
+  "active": "401e222dc2f19c49",
   "lastOpenFiles": [
-    "linux/iptables.md",
-    "languages/mysql.md",
-    "languages/html.md",
     "languages/go.md",
     "languages/ansible.md",
     "index.md",
+    "zfs/intro.md",
+    "zfs/commands.md",
+    "python/intermediate python.md",
+    "python/design-patterns.md",
+    "python/beginners-python.md",
+    "operating systems/opnsense.md",
+    "operating systems/openwrt.md",
+    "operating systems/nix.md",
+    "operating systems/coreos.md",
     "nixos/common-config.md",
-    "operating systems/nix.md"
+    "linux/iptables.md",
+    "languages/mysql.md",
+    "languages/html.md"
   ]
 }
